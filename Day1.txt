@@ -1,0 +1,60 @@
+1. Different between HTTP1.1 & HTTP2
+
+
+HTTP is hyper text transfer protocol used for data information passing with set of rules.
+
+HTTP1.1                                              HTTP2
+
+*can reuse                                        *concurrent
+*it work in textual form                          *it work in binary form
+*It break and remake TCP                          *it allow multiple, so one TCP is 
+with ever new request                             required for multiple request
+*It compress data itself                          *It use Hpack for data compress
+
+
+2.Objects & internal representation in Javascript
+
+Object- object which contain many values.To declare ojects with constant keyword.
+it mention within {}.Its contain all types of property.
+Object{
+Property1:number
+Property2:Strings
+Property3:array
+}
+
+
+
+
+4. IP Address,Port,HTTP Methods,MAC Address
+
+ IP Address - Means a unique address for particular device to identify in internet.
+Where it help to communicate with other devices through internet.
+
+Port - it has number to identify the device connected for data transfer from onepoint to another enpoint for specific application.
+Each application have unique port number.
+eg: Like email transfer from one device to another
+
+HTTP Methods - GET ( Read)
+               POST (Create)
+               PUT (Update)
+               Delete ( Delete)
+Example: Facebook -1. Reading the Post
+                   2.Commenting to particular post
+                   3.Editing the given comment
+                   4.Deleting the comment.
+
+MAC Address - the IP address which cant change.It Assigned by the manufacturer for every device like laptop,
+phone,router.
+
+
+
+
+
+
+
+
+
+
+
+
+                    

@@ -1,0 +1,15 @@
+1.Different between Documents and Browser objects:
+
+
+Browser object/window object:
+
+*This objects consist of screen,history,navigator,location,webpage.
+*It help to change in tabs or browser window.
+*Non Standardized and change according to the browser.
+
+Documents Object:
+
+*This objects consist od content,images,button.
+*It helps to change in webpages.
+*Standardized and specific to HTML documents.
+
