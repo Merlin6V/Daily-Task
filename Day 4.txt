@@ -1,0 +1,239 @@
+Anonymous function & IIFE
+
+a. print odd numbers in array:
+
+Anonymous Function:
+
+var odd = function(array){
+for(var i = 0 ; i< array.length ; i++){
+if(array[i]%2!=0){
+ console.log(array[i])
+   } 
+ }
+ }
+odd([1,2,3,4,5,6,7,8,9,10,11]);
+
+IIFE:
+
+( function(array){
+for(var i = 0 ; i< array.length ; i++){
+if(array[i]%2!=0){
+ console.log(array[i])
+   } 
+ }
+ }
+)([1,2,3,4,5,6,7,8,9,10,11]);
+
+b.string into title caps:
+
+Anonymous Function:
+
+var x = function (string) {
+string = string.toLowerCase().split(' ');
+//console.log(string)
+for (var i = 0; i < string.length; i++) {
+string[i] = string[i].charAt(0).toUpperCase()+string[i].slice(1)
+console.log(string[i])
+
+   } 
+return string.join(' ');
+                  
+}
+x("leaving office early by today");
+
+IIFE:
+(function (string) {
+                    string = string.toLowerCase().split(' ');
+                  
+                    for (var i = 0; i < string.length; i++) {
+                      string[i] = string[i].charAt(0).toUpperCase()+string[i].slice(1) 
+                    } 
+                    return string.join(' ');
+                  })("leaving office by today evening");
+
+c. sum of the numbers in array:
+
+function getsum(...arr)
+{
+  var sum =0;
+  for(var i=0; i < arr.length;i++){
+  sum = sum +arr[i]
+  }
+  return sum;
+}
+var result = getsum(1,2,3,4,5,6,7,8,9);
+console.log(result);
+
+IIFE:
+
+(function getsum(...arr)
+{
+  var sum =0;
+  for(var i=0; i < arr.length;i++){
+  sum = sum +arr[i]
+  }
+  return sum;
+})
+(1,2,3,4,5,6,7,8,9);
+
+d.Return all the prime number:
+
+Anonymous Function:
+var prime = function(Array){
+Array = Array.filter((number) => {
+
+for (var i = 2; i <= Math.sqrt(number); i++) {
+if (number % i === 0)
+return false;
+
+ }
+ return true;
+  
+});
+console.log(Array);
+}
+prime([1,7,9,11])
+
+
+IIFE
+
+ (  
+function(Array){
+Array = Array.filter((number) => {
+
+for (var i = 2; i <= Math.sqrt(number); i++) {
+if (number % i === 0)
+return false;
+
+ }
+ return true;
+  
+});
+console.log(Array);
+})([1,7,9,11])
+ 
+
+e. Palindrome array
+
+IIFE
+
+(  function palindrome(array)
+ {
+
+for (var i = 0; i < array.length / 2; i++)
+ {
+if(array[i]!== array[array.length-1-[i]])
+
+
+
+return false;
+ }
+return true;
+        })([1,9,10,9,1])
+
+
+g.Remove duplicate from array
+
+var inputArray = ["1", "2","5", "5", "3", "1", "8", "9"];
+
+var outputArray = inputArray.filter(
+  function(item, index) {
+    //console.log(item, index);
+    //console.log("Last",inputArray.lastIndexOf(item));
+    return inputArray.indexOf(item) === inputArray.lastIndexOf(item);
+  }
+  );
+  
+console.log(outputArray);
+
+h.Rotating array for k times:
+
+function rotateArray(arr, k) {
+  var rotation = k % arr.length;
+
+  var removed = arr.splice(-rotation);
+  arr.unshift(...removed);
+
+  return arr;
+}
+
+var array = [1, 2, 3, 4, 5];
+var k = 3;
+var rotatedArray = rotateArray(array, k);
+console.log(rotatedArray); 
+
+Do the below programs in arrow functions.
+
+a.print odd numbers in array.
+
+var numbers = [11, 21, 33, 14, 15, 16, 17, 18, 19];
+
+const printOdd= (arr) => {
+  arr.forEach((num) => {
+    if (num % 2 !== 0) {
+      console.log(num);
+    }
+  });
+};
+
+printOdd(numbers);
+b.string into title caps:
+
+var arrow = function (string) {
+string = string.toLowerCase().split(' ');
+//console.log(string)
+for (var i = 0; i < string.length; i++) {
+string[i] = string[i].charAt(0).toUpperCase()+string[i].slice(1)
+console.log(string[i])
+
+   } 
+return string.join(' ');
+                  
+}
+arrow("leaving office early by today");
+
+c. sum of numbers in array:
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+var printOdd = (arr) => {
+  var odd = arr.filter((num) => num % 2 !== 0);
+  console.log(odd);
+};
+
+printOdd(numbers);
+
+d. Print prime numbers
+
+var prime = function(Array){
+Array = Array.filter((number) => {
+
+for (var i = 2; i <= Math.sqrt(number); i++) {
+if (number % i === 0)
+return false;
+
+ }
+ return true;
+  
+});
+console.log(Array);
+}
+prime([1,7,9,11])
+
+e. const arr = ['madam', 'hello', 'level', 'world', 'racecar'];
+
+const findPalindromes = (arr) => {
+  const palindromes = arr.filter((word) => {
+    const reversed = word.split('').reverse().join('');
+    return word === reversed;
+  });
+
+  return palindromes;
+};
+const result = findPalindromes(arr);
+console.log(result);
+
+
+
+
+
