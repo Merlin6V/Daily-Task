@@ -1,0 +1,115 @@
+1.
+var jsonString = '{"name":"Merlin" , "age":25, "state":["kerala","tamilnadu"]}'
+var objJSON = JSON.parse(jsonString);
+//for of loop
+const jsonObject = {
+  name:'Merlin' , age:25, state:'tamilnadu'
+};
+const entries = Object.entries(jsonObject);
+for (const [key, value] of entries) {
+  console.log(`${key}: ${value}`);
+}
+// for each
+const jsonObject = {
+  name:'Merlin' , age:25, state:'tamilnadu'
+};
+const entries = Object.entries(jsonObject);
+entries.forEach(([key, value]) => {
+  console.log(`${key}: ${value}`);
+});
+//for of loop
+
+ var result = "";
+for (var i = 0; i < objJSON.state.length; i++) {
+  result += objJSON.state[i] + ", ";
+ }
+ console.log(result);
+ console.log(objJSON.hasOwnProperty("label"));
+//for in loop
+for(key in objJSON){
+console.log(objJSON[key]);
+}
+
+
+2. Resume in JSN format:
+
+
+
+{
+  "personal details": {
+    "name": "Merlin",
+    "label": "R",
+    "email": "merlinvignesh67@yahoo.com",
+    "phone": "8668029913",
+    "degree": "MBA",
+    "
+    "summary": "Total 1 year of experience as IT Recruiter.Handling the End to End complete Recruitment and selection proces",
+    "location": {
+      "address": "1316, peach tower, siruser",
+      "postalCode": "603103",
+      "city": "chennai",
+      "countryCode": "India",
+      "region": "Tamil Nadu"
+    },
+    
+  "work": [
+    {
+      "company": "Preludesys",
+      "position": "HR executive",
+      "website": "https://preludesys.com/",
+      "startDate": "2022-09-20",
+      "endDate": "2023-05-06",
+      "summary": "Managing the entire recruitment cycle from requisition capturing till on boarding which involves - sourcing, screening, short listing, scheduling , coordinating interviews, pre-hire process, offer negotiation and post-offer follow ups",
+      
+    }
+  ],
+  
+  "education": [
+    {
+      "institution": "Kongu Engineering College",
+      "area": "Master of business administration",
+      "studyType": "full time",
+      "startDate": "2018-07-25 ",
+      "endDate": "2020-05-03",
+      "gpa": "8.5",
+      ]
+    }
+  ],
+  
+  "skills": [
+    {
+      "name": "Programming language",
+      "keywords": [
+        "HTML,Javascript"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Tamil,English",
+      "fluency": "Tamil,English"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Dance","weaving"
+      "keywords": [
+        "classic, western"
+      ]
+    }
+  ]
+}
+
+
+Window:
+the main JavaScript object root, the global object in a browser.
+The window object represents the current browsing context. It holds things like window.location, window.history, window.screen, window.status, or the window.document
+
+Screen:
+It is a small information object about physical screen dimensions.
+It can be used to display screen width, height, colorDepth, pixelDepth etc. It is not mandatory to write window prefix with screen object like window.screen
+
+Document:
+The main object of the potentially visible.
+When an HTML document is loaded into a web browser , it becomes a document object. It is the root node of the HTML document.
+

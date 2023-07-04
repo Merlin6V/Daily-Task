@@ -1,0 +1,119 @@
+1. Class - Movie
+
+class movie {
+    constructor(title,studio,rating) {
+      this.title = title;
+      this.studio = studio;
+      this.rating = rating;
+    }
+    set rating1(X) {
+   this.rating = X;
+    }
+    gettitle() {
+        return this.title;
+    }
+    getstudio() {
+        return this.studio
+    }
+    set rating2(X) {
+        this.rating = X;
+        
+    }
+    set title1(X) {
+        this.title = X;
+    }
+    set studio1(X) {
+        this.studio = X;
+    }
+  }
+  
+  var A = new movie("Blackmem","Goodlucky","rating");
+  A.rating1 = "PG";
+  A.rating2 = "PG13";
+  A.title1 = "Casino Royale";
+  A.studio1 = "Eon Production";
+  console.log(A.gettitle());
+  console.log(A.rating);
+  console.log(A.getstudio());
+  console.log(A.rating);
+  console.log(A.title);
+  console.log(A.studio);
+  console.log(A.title,A.studio,A.rating);
+  
+
+
+2.Radius and colour of the circle:
+
+class circle {
+    constructor(radius,color) {
+      this.radius = radius;
+      this.color = color;
+    }
+    getradius() {
+        return 2*Math.PI*(this.radius);
+    }
+    set radius1(X) {
+   this.radius = X;
+    }
+    getcolor() {
+        return this.color;
+    }
+    set color1(X) {
+    this.color = X;
+    }
+    getcircumstance() {
+        return Math.PI*(this.radius)*(this.radius)
+    }
+    getarea() {
+      return  Math.sqrt(this.radius)*Math.PI;
+    }
+  }
+  
+  var A = new circle(1.0,"red");
+  A.radius1 = 5;
+  A.color1 = "Black"
+  console.log(A.getarea());
+  console.log(A.getradius());
+  console.log(A.radius);
+  console.log(A.getcolor());
+  console.log(A.color);
+  console.log(A.getcircumstance());
+
+
+
+3.A Person details:
+
+class person{
+  constructor(Name,contactno,age,district){
+    this.Name = Name;
+    this.contactno = contactno;
+    this.age = age;
+    this.district = district;
+
+  }
+getvoterID(){
+return  "Hi"+ " " + this.Name + " " +"your are eligible to vote in"+ " " + this.district;
+}
+}
+var p1 = new person("Lucy",7845123690,19,"trichy") ;
+var p2 = new person("Zepi",8521463255,25,"chennai");
+p3=p2
+console.log(p2.getvoterID());
+ 
+
+
+4.uber price.
+
+class uber{
+  constructor(uberfare,bookingfee){
+    this.uberfare = uberfare;
+    this.bookingfee = bookingfee;
+
+  }
+getfee(){
+return "your Basic fare is"+ " " + (this.bookingfee)*Math.sqrt(10)+" "+"Have a happy journey!!";
+}
+}
+var price = new uber(10,20) ;
+console.log(price.getfee());
+ 
