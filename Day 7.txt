@@ -1,0 +1,119 @@
+1.
+
+
+html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+     
+      var xhr = new XMLHttpRequest();
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var details = JSON.parse(xhr.responseText);
+           console.log(details);
+           const Countries = details.filter((continents) => continents.region === "Asia");
+        const result =Countries.map((continents)=> continents.name);
+         console.log(Countries);
+          console.log(result);
+          
+        }  
+      };
+      
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+
+2.Population:
+
+
+ var xhr = new XMLHttpRequest();
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var details = JSON.parse(xhr.responseText);
+           console.log(details);
+           var D =details.filter((ele)=> ele.population<100000);
+           var result =D.map((ele)=> ele.name);
+
+           console.log(result);
+           console.log(D);
+        }
+      };
+      
+      xhr.send();
+
+3.
+
+
+var xhr = new XMLHttpRequest();
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var details = JSON.parse(xhr.responseText);
+           console.log(details);
+           details.forEach((country) => {
+        console.log("Name:", country.name.common);
+         console.log("Capital:",country.capital);
+           console.log("Flag:", country.flags.svg);
+    });
+           
+        }  
+      };
+      
+      xhr.send();
+
+
+4.
+
+ var xhr = new XMLHttpRequest();
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var details = JSON.parse(xhr.responseText);
+           console.log(details);
+           var D =details.reduce((acc,country)=> acc+country.population,0);
+        
+           console.log(D);
+        }
+      };
+           
+        
+      xhr.send();
+
+5.
+
+var req = new XMLHttpRequest();
+req.open("GET","https://restcountries.com/v2/all");
+req.send();
+req.onload=function(){
+    var details=JSON.parse(req.response);
+   var currency = details.filter((element) => {
+     for(let key in element.currencies){
+        if(element.currencies[key].code === "USD"){
+            return element;
+        }
+     }
+   })
+        console.log(currency);
+    }
